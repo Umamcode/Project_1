@@ -20,12 +20,12 @@
 <body class="hold-transition login-page" style="background-image: url(assets/img/bglogin.jpg)">
 <div class="login-box">
   <div class="login-logo">
-    <a href="index.html"><b>Sign</b>In</a>
+    <a href="index.html"><b>Puskesmas</b>UA Medika</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to Register</p>
+      <p class="login-box-msg">Register Your Account</p>
       <!-- <p class="login-box-msg">Username : umam | Password : umam123</p> -->
 
 

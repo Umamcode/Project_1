@@ -20,7 +20,7 @@
 <body class="hold-transition login-page" style="background-image: url(assets/img/bglogin.jpg)">
 <div class="login-box">
   <div class="login-logo">
-    <a href="index.html"><b>Log</b>In</a>
+    <a href="index.html"><b>Puskesmas</b>UA Medika</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
