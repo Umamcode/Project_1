@@ -189,7 +189,7 @@
         href: null, type: null,
         hreflang: langs,
         media: media,
-        sizes: ["all", "16x16", "16x16 32x32", "16x16 32x32 64x64"]
+        sizes: ["all", "16x16", "16x16 32x32", "16x16 32x32 6profile4"]
       }
     },
     map: { attrs: { name: null } },

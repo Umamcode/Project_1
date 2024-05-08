@@ -21,10 +21,10 @@ if (isset($_POST['submit'])) {
     $_tensi = $_POST['tensi'];
     $_keterangan = $_POST['keterangan'];
     $_pasien_id = $_POST['pasien_id'];
-    $_dokter_id = $_POST['dokter_id'];
-    $data = [$_tanggal, $_berat, $_tinggi, $_tensi, $_keterangan, $_pasien_id, $_dokter_id, $id];
+    $_Paramedik_id = $_POST['Paramedik_id'];
+    $data = [$_tanggal, $_berat, $_tinggi, $_tensi, $_keterangan, $_pasien_id, $_Paramedik_id, $id];
     // Query SQL untuk update data pasien berdasarkan id
-    $sql = "UPDATE periksa SET tanggal = ?, berat = ?, tinggi = ?, tensi = ?, keterangan = ?, pasien_id = ?, dokter_id = ? WHERE id = ?";
+    $sql = "UPDATE periksa SET tanggal = ?, berat = ?, tinggi = ?, tensi = ?, keterangan = ?, pasien_id = ?, Paramedik_id = ? WHERE id = ?";
     $stmt = $dbh->prepare($sql);
     $stmt->execute($data);
     echo "<script>window.location.href = 'index.php';</script>";
@@ -94,7 +94,7 @@ if (isset($_POST['submit'])) {
                                 <div class="form-group row">
                                     <label for="keterangan" class="col-4 col-form-label">Keterangan</label>
                                     <div class="col-8">
-                                        <input id="keterangan" name="keterangan" type="email" class="form-control" value="<?= $row['keterangan'] ?>">
+                                        <input id="keterangan" name="keterangan" type="text" class="form-control" value="<?= $row['keterangan'] ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -113,14 +113,14 @@ if (isset($_POST['submit'])) {
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="dokter_id" class="col-4 col-form-label">Dokter ID</label>
+                                    <label for="Paramedik_id" class="col-4 col-form-label">Paramedik ID</label>
                                     <div class="col-8">
-                                        <select id="dokter_id" name="dokter_id" class="custom-select">
+                                        <select id="Paramedik_id" name="Paramedik_id" class="custom-select">
                                             <?php
                                             $sqljenis = "SELECT * FROM paramedik";
                                             $rsjenis = $dbh->query($sqljenis);
                                             foreach ($rsjenis as $rowjenis) {
-                                                $selected = ($row['dokter_id'] == $rowjenis['id']) ? 'selected' : '';
+                                                $selected = ($row['Paramedik_id'] == $rowjenis['id']) ? 'selected' : '';
                                                 echo "<option value='" . $rowjenis['id'] . "' $selected>" . $rowjenis['nama'] . "</option>";
                                             }
                                             ?>

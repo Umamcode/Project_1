@@ -97,13 +97,21 @@ if (isset($_POST['submit'])) {
                                 <div class="form-group row">
                                     <label for="kategori" class="col-4 col-form-label">Kategori</label>
                                     <div class="col-8">
-                                        <input id="kategori" name="kategori" type="text" class="form-control" value="<?= $row['kategori'] ?>">
+                                        <select id="kategori" name="kategori" class="custom-select">
+                                            <option value="Umum" <?= ($row['kategori'] == 'Umum') ? 'selected' : '' ?>>Umum</option>
+                                            <option value="Spesialis Saraf" <?= ($row['kategori'] == 'Spesialis Saraf') ? 'selected' : '' ?>>Spesialis Saraf</option>
+                                            <option value="Spesialis Anak" <?= ($row['kategori'] == 'Spesialis Anak') ? 'selected' : '' ?>>Spesialis Anak</option>
+                                            <option value="Dokter Gigi" <?= ($row['kategori'] == 'Dokter Gigi') ? 'selected' : '' ?>>Dokter Gigi</option>
+                                            <option value="Dokter Kandungan" <?= ($row['kategori'] == 'Dokter Kandungan') ? 'selected' : '' ?>>Dokter Kandungan</option>
+                                            <option value="Spesialis Bedah" <?= ($row['kategori'] == 'Spesialis Bedah') ? 'selected' : '' ?>>Spesialis Bedah</option>
+                                            <option value="Spesialis Kulit" <?= ($row['kategori'] == 'Spesialis Kulit') ? 'selected' : '' ?>>Spesialis Kulit</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="telpon" class="col-4 col-form-label">No Telp</label>
                                     <div class="col-8">
-                                        <input id="telpon" name="telpon" type="email" class="form-control" value="<?= $row['telpon'] ?>">
+                                        <input id="telpon" name="telpon" type="text" class="form-control" value="<?= $row['telpon'] ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">

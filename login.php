@@ -13,8 +13,11 @@
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  
+  <link href="dist/img/logoUA.png" rel="icon">
+  <link href="dist/img/logoUA.png" rel="apple-touch-icon">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image: url(assets/img/bglogin.jpg)">
 <div class="login-box">
   <div class="login-logo">
     <a href="index.html"><b>Log</b>In</a>
@@ -22,13 +25,13 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
-      <p class="login-box-msg">Username : umam | Password : umam123</p>
+      <p class="login-box-msg">Log in to start your session</p>
+      <!-- <p class="login-box-msg">Username : umam | Password : umam123</p> -->
 
 
-      <form id="loginForm" onsubmit="login()">
+      <form action="proses.php" method="POST">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Username" id="username" required>
+          <input type="text" class="form-control" placeholder="Username" id="username" name="username" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -36,7 +39,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" id="password" required>
+          <input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -47,7 +50,7 @@
         
           <!-- /.col -->
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block" name="submit">Log In</button>
           </div>
           <!-- /.col -->
         </div>
@@ -60,7 +63,7 @@
         <a href="#">I forgot my password</a>
       </p>
       <p class="mb-0">
-        <a href="#" class="text-center">Register a new membership</a>
+        <a href="register1.php" class="text-center">Register a new membership</a>
       </p>
     </div>
     <!-- /.login-card-body -->

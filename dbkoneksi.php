@@ -9,3 +9,9 @@ $dsn = "mysql:host=$host;dbname=$dbname";
 
 // Buat koneksi Database
 $dbh = new PDO($dsn, $user, $pass);
+$conn = mysqli_connect ('localhost','root','','dbpuskesmas2');
+
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+?>

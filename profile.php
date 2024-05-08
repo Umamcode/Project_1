@@ -47,7 +47,7 @@ require_once 'sidebar.php';
                                                     <div class="col-md-4 mt-3">
                                                         <h5 class="card-title">Informasi Mahasiswa</h5>
                                                         <div class="text-center pt-5">
-                                                            <img src="dist/img/4x6.jpg" class="img-fluid" alt="Profile Image">
+                                                            <img src="dist/img/profile.jpg" class="img-fluid" alt="Profile Image">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8">

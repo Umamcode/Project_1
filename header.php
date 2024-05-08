@@ -15,8 +15,8 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
     <!-- tambahkan favicon -->
-    <link href="dist/img/logo_tittle.png" rel="icon">
-    <link href="dist/img/logo_tittle.png" rel="apple-touch-icon">
+    <link href="dist/img/logoUA.png" rel="icon">
+    <link href="dist/img/logoUA.png" rel="apple-touch-icon">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

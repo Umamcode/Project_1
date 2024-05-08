@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+
+    <link href="dist/img/logoUA.png" rel="icon">
+    <link href="dist/img/logoUA.png" rel="apple-touch-icon">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -27,7 +30,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="../index.php" class="nav-link">Home</a>
+                    <a href="../home.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="../pasien" class="nav-link">Pasien</a>
