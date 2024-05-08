@@ -49,7 +49,7 @@ require_once 'sidebar.php';
                                         <th>Tensi</th>
                                         <th>Keterangan</th>
                                         <th>Pasien ID</th>
-                                        <th>Dokter ID</th>
+                                        <th>Paramedik ID</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -69,7 +69,7 @@ require_once 'sidebar.php';
                                         echo "<td>" . $row['tensi'] . "</td>";
                                         echo "<td>" . $row['keterangan'] . "</td>";
                                         echo "<td>" . $row['pasien_id'] . "</td>";
-                                        echo "<td>" . $row['dokter_id'] . "</td>";
+                                        echo "<td>" . $row['paramedik_id'] . "</td>";
                                         echo "<td>";
                                         echo "<a href='edit.php?id=" . $row['id'] . "'><button class='btn btn-warning'>Edit</button></a>";
                                         echo "<span class='mx-1'></span>"; 

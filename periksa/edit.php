@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $_Paramedik_id = $_POST['Paramedik_id'];
     $data = [$_tanggal, $_berat, $_tinggi, $_tensi, $_keterangan, $_pasien_id, $_Paramedik_id, $id];
     // Query SQL untuk update data pasien berdasarkan id
-    $sql = "UPDATE periksa SET tanggal = ?, berat = ?, tinggi = ?, tensi = ?, keterangan = ?, pasien_id = ?, Paramedik_id = ? WHERE id = ?";
+    $sql = "UPDATE periksa SET tanggal = ?, berat = ?, tinggi = ?, tensi = ?, keterangan = ?, pasien_id = ?, paramedik_id = ? WHERE id = ?";
     $stmt = $dbh->prepare($sql);
     $stmt->execute($data);
     echo "<script>window.location.href = 'index.php';</script>";

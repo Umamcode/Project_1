@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Bulan Mei 2024 pada 05.37
+-- Waktu pembuatan: 08 Bulan Mei 2024 pada 11.57
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -116,19 +116,19 @@ CREATE TABLE `periksa` (
   `tensi` varchar(20) DEFAULT NULL,
   `keterangan` varchar(100) DEFAULT NULL,
   `pasien_id` int(11) DEFAULT NULL,
-  `dokter_id` int(11) DEFAULT NULL
+  `paramedik_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `periksa`
 --
 
-INSERT INTO `periksa` (`id`, `tanggal`, `berat`, `tinggi`, `tensi`, `keterangan`, `pasien_id`, `dokter_id`) VALUES
-(1, '2024-03-01', 65.5, 170, '120/80', 'Normal', 1, 1),
-(2, '2024-03-05', 70, 165, '130/85', 'Perlu pemantauan lebih lanjut', 2, 2),
-(3, '2024-03-10', 72, 175, '140/90', 'Perlu tindakan medis', 3, 3),
-(4, '2024-03-15', 68.5, 168, '125/82', 'Normal', 4, 4),
-(5, '2024-03-20', 75, 180, '135/88', 'Perlu pemantauan lebih lanjut', 5, 5);
+INSERT INTO `periksa` (`id`, `tanggal`, `berat`, `tinggi`, `tensi`, `keterangan`, `pasien_id`, `paramedik_id`) VALUES
+(1, '2024-03-19', 75.5, 180, '120/80', 'Sudah boleh pulang', 1, 1),
+(2, '2024-02-15', 70, 165, '130/80', 'Perlu mengurangi dosis obat', 2, 1),
+(3, '2023-12-20', 60, 165, '125/75', 'Perlu tindakan operasi', 3, 1),
+(4, '2024-05-21', 48.5, 158, '125/82', 'perlu diberi infus', 4, 1),
+(5, '2024-03-03', 65, 175, '120/80', 'Normal', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -170,8 +170,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `name`) VALUES
-(1, 'admin', 'adminti07', 'Admin'),
-(2, 'Umam', 'UmamAfif03', 'Muhammad Umam Afif');
+(9, 'admin', '$2y$10$dkMkOoN..Ah1lDCPERE6nO9JEZ2xPVwHPx5jYWWtzmiDZEh35vcF2', 'admin'),
+(10, 'umam', '$2y$10$iub/CQX8vowwi7vgwEj.JetEhutCHsBf/PQ1Fs3oGVMor9hyxmr5q', 'Muhammd Umam Afif');
 
 --
 -- Indexes for dumped tables
@@ -203,7 +203,7 @@ ALTER TABLE `pasien`
 ALTER TABLE `periksa`
   ADD PRIMARY KEY (`id`),
   ADD KEY `pasien_id` (`pasien_id`),
-  ADD KEY `dokter_id` (`dokter_id`);
+  ADD KEY `dokter_id` (`paramedik_id`);
 
 --
 -- Indeks untuk tabel `unit_kerja`
@@ -256,7 +256,7 @@ ALTER TABLE `unit_kerja`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -279,7 +279,7 @@ ALTER TABLE `pasien`
 --
 ALTER TABLE `periksa`
   ADD CONSTRAINT `periksa_ibfk_1` FOREIGN KEY (`pasien_id`) REFERENCES `pasien` (`id`),
-  ADD CONSTRAINT `periksa_ibfk_2` FOREIGN KEY (`dokter_id`) REFERENCES `paramedik` (`id`);
+  ADD CONSTRAINT `periksa_ibfk_2` FOREIGN KEY (`paramedik_id`) REFERENCES `paramedik` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
